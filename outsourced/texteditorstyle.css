@@ -1,0 +1,128 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+   
+*/
+
+
+/*common properties for frame...*/
+
+.container, .background, #textEditor{
+  
+    width: 1020px;
+    height: 580px;
+    top: 68px;
+    left:300px;
+    margin: 0px;
+  // box-shadow:1px 1px 1px #ccc;
+    //border-radius: 1px;
+   
+}
+
+/*common properties for text size and padding...*/
+
+.highlight, #textEditor{
+    padding: 10px;
+    font: 14px/20px 'Source Code Pro',sans-serif;
+    letter-spacing: 0px;
+}
+
+/* Div contain All the Div and textarea required for texthighlight.*/
+
+.container{
+    display: block;
+    margin: 0 auto;
+    transform: translateZ(0);
+    -webkit-text-size-adjust: none;
+    
+}
+
+/*Div containing snytax Highlighting Div*/
+
+.background{
+    position: absolute;
+    z-index: 3;
+    border: 2px solid white;
+    -webkit-box-shadow: 0 .0 .5px 0.5px #ccc;
+    background-color: transparent;
+    overflow: auto;
+    pointer-events: none;
+    transition: transform 1s;
+    //border-color:#F2F4F5;
+}
+
+/*Div that containing text for highlight properties...*/
+
+.highlight{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #545454;
+}
+
+/*Textarea properties*/
+
+#textEditor{
+    display: block;
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    border: 2px solid transparent;
+    color: white;
+    background-color: white;
+    overflow: auto;
+    resize: none;
+    transition: transform 1s;
+    caret-color: #5b5b5b;
+}
+
+/*Outline color on focus to transparent*/
+
+textarea:focus{
+    outline-color: transparent;
+}
+
+/*Add mark tag to text for highlight...*/
+
+mark{    
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+/*Text Highlight Color Here....*/
+/*
+.code-elem{color: #0058ed ;}
+.code-operators{color:#14b703;}
+.code-keywords{color: #c6036b;}
+::selection{background-color: #e2e2e2;}
+.code-func{color:#ff2828 ;}
+.wrapper{color: silver;}
+.wrapper *{color:silver ;}
+.parenthese{color: #ff2828;}
+*/
+.code-elem{color: #36A3D9 ;}
+.code-operators{color:#14b703;}
+.code-keywords{color: blueviolet;}
+::selection{background-color: #e2e2e2;}
+.code-func{color:#FF7733 ;}
+.wrapper{color: silver;}
+.wrapper *{color:silver ;}
+.parenthese{color: #F59F16;}
+
+.error-panel{
+    padding-left: 10px;
+    z-index: 4;
+    color: #5b5b5b;
+    background-color: #fff;
+    width: 530px;
+    height: 100px;
+    margin-top: -20px;
+    left: 290px;
+    margin-left:512px;
+    overflow-y:auto;
+    font-size: 12px;
+    border: 1px solid;
+    border-color: #FF7733;
+}
