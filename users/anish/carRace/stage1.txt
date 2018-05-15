@@ -1,0 +1,85 @@
+
+global:
+   integer i=3;
+   integer k=0;
+end;
+start:
+    setBgColor(27AE60);
+    while(i < 500):
+        k=0-i;
+        integer ab=random(0,200);
+        loadObject(leftRoad[i],200,100*k);
+        loadObject(grass[i],75,100*k);
+        loadObject(grass2[i],835,100*k);
+        i=i+1;
+    end;
+    i=3;
+    while(i < 30):
+        k=-i;
+        integer ab=random(250,750);
+        loadObject(man[i],ab,1800*k);
+        loadObject(man2[i],ab,1200*k);
+        integer x=random(250,750);
+        integer y=random(250,750);
+        loadObject(rock[i],x,1400*k);
+        loadObject(enemy[i],y,1200*k);
+        i=i+1;
+    end;
+    loadObject(car,400,-700);
+    car.setRadius(400,400);
+    loadAudio(bg);
+    bg.playOnce();
+end;
+keydown:
+    KEY_RIGHT:
+        car.moveX(20);
+    end;
+    KEY_LEFT:
+        car.moveX(-20);
+    end;
+end;
+impassable:
+ 
+end;
+collision:
+    car with grass2:
+        bg.stop();
+        switchState(gameover);
+    end;
+    car with grass:
+        bg.stop();
+        switchState(gameover);
+    end; 
+    car with enemy:
+        bg.stop();
+        switchState(gameover);
+    end; 
+    car with rock:
+        bg.stop();
+        switchState(gameover);
+    end;  
+    car with man:
+        bg.stop();
+        switchState(gameover);
+    end;
+    car with man2:
+        bg.stop();
+        switchState(gameover);
+    end;   
+end;
+always:
+    car.moveY(-30);
+    car.stick(camera);
+end;
+inradius:
+   car with man:
+      man.moveX(-20);
+   end;
+    car with man2:
+      man2.moveX(15);
+   end;
+   car with enemy:
+       enemy.moveY(20);
+   end;
+end;
+

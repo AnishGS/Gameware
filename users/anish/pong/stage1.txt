@@ -1,0 +1,61 @@
+
+global:
+    integer x=1;
+    integer y=1;
+    integer rbx=random(5,50);
+    integer rby=random(5,50);
+    integer xSpeed=rbx;
+    integer ySpeed=rby;
+end;
+start:
+    loadObject(batL,0,0);
+    loadObject(batR,750,0);
+    integer xr=random(0,500);
+    integer yr=random(0,500);
+    loadObject(ball,xr,yr);
+    loadObject(upWall,0,0);
+    loadObject(downWall,0,580);
+end;
+keydown:
+    KEY_UP:
+        batR.moveY(-40);   
+    end;
+    KEY_DOWN:
+        batR.moveY(40);   
+    end;
+     KEY_W:
+        batL.moveY(-40);   
+    end;
+    KEY_S:
+        batL.moveY(40);   
+    end;
+end;
+collision:
+    ball with upWall:
+        y=1;            
+    end;
+    ball with downWall:
+       y=0-1;
+    end;
+    ball with batR:
+       xSpeed=random(5,50);
+        ySpeed=random(5,50);
+    x=0-1;
+    end;
+     ball with batL:
+       xSpeed=random(5,50);
+        ySpeed=random(5,50);
+    x=1;
+    end;
+end;
+impassable:
+	
+end;
+inradius:
+	 
+end;
+always:
+	 ball.moveX(xSpeed*x);
+         ball.moveY(ySpeed*y);
+end;
+

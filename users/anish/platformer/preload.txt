@@ -1,0 +1,10 @@
+
+static []background(colored_grass.png);
+static []land(grassMid.png);
+platformer man(adventurer_idle.png);
+platformer mouse(mouse.png);
+gun fire(fireball.png);
+topdown bee(bee.png);
+static []coin(coinGold.png);
+static []spikes(spikes.png);
+

@@ -1,0 +1,21 @@
+global:
+	/* global variable declaration */
+end;
+start:
+	 /* game start code to execute once on startup. */
+end;
+keydown:
+	 /* keyboard event block. */
+end;
+collision:
+	 /* collision detection block. */
+end;
+impassable:
+	 /* information about solid impassable objects. */
+end;
+inradius:
+	 /* block executes when objects come near each other */
+end;
+always:
+	 /* block executes every frame */
+end;

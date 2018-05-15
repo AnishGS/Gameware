@@ -1,0 +1,7 @@
+
+topdown batR(pongbat.png);
+topdown batL(pongbat.png);
+topdown ball(pongball.png);
+static upWall(wall.png);
+static downWall(wall.png);
+

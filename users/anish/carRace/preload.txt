@@ -1,0 +1,12 @@
+
+topdown car(car_blue_5.png);
+static []leftRoad(road_asphalt21.png);
+static []grass(land_grass04.png);
+static []grass2(land_grass04.png);
+static []rock(rock1.png);
+topdown []man(character_black_red.png);
+topdown []man2(character_black_green.png);
+topdown []enemy(car_green_1.png);
+audio bg(Crystals.mp3);
+static retryIcon(retry.png);
+

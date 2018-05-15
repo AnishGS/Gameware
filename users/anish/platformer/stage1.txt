@@ -1,0 +1,74 @@
+global:
+    integer i=0;
+end;
+start:
+    setBgColor(D0F4F7);
+    while(i < 20):
+        loadObject(background[i],i*1020,-200);
+        loadObject(land[i],i*1000,450);
+        loadObject(coin[i],i*500,350);
+        i=i+1;
+    end;
+    i=10;
+    while(i < 20):
+        loadObject(spikes[i],i*1400,320);
+        i=i+1;
+    end;
+    loadObject(man,0,0);
+    loadObject(fire,0,0);
+    loadObject(bee,500,700);
+    loadObject(mouse,1000,300);
+    man.setRadius(600,600);
+end;
+collision:
+    man with coin:
+       coin.destroy();
+    end;
+end;
+impassable:
+    man with land;
+    mouse with land;
+end;
+inradius:
+    man with bee:
+        bee.follow(man,20);
+    end;
+    man with mouse:
+        mouse.follow(man,30);
+    end;
+end;
+always:
+    man.stick(camera);
+    man.stick(fire);
+    mouse.moveY(0);
+    if(bee.x < man.x):
+        bee.scaleX(-1);
+    end;
+    if(bee.x>man.x):
+        bee.scaleX(1);
+    end;
+    if(mouse.x< man.x):
+        mouse.scaleX(-1);
+    end;
+    if(mouse.x>man.x):
+        mouse.scaleX(1);
+    end;
+end;
+keydown:
+   KEY_RIGHT:
+       
+       man.scaleX(1);
+       man.moveX(85);
+   end;
+   KEY_LEFT:
+       man.scaleX(-1);
+       man.moveX(-85);
+   end;
+   KEY_UP:
+       man.jump(400);
+   end;
+   KEY_SPACEBAR:
+       fire.shootX(250);
+   end;
+end;
+

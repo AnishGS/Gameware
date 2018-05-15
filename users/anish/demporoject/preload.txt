@@ -1,0 +1,4 @@
+
+platformer man(adventurer_idle.png);
+static land(grassMid.png);
+

@@ -1,0 +1,9 @@
+static []sky(sky.jpg);/*here is the sky*/
+topdown spaceship(playerShip1_green.png);
+topdown []enemy(enemyGreen5.png);
+topdown []enemy2(enemyRed1.png);
+gun laser(laserBlue01.png);
+audio song(song.mp3);
+audio sound(spacesound.mp3);
+audio laserSound(laser.mp3);
+

@@ -1,0 +1,24 @@
+
+global:
+end;
+start:
+	setBgColor(123454); 
+end;
+keydown:
+	KEY_SPACEBAR:
+            switchState(space1);
+        end;
+end;
+collision:
+	
+end;
+impassable:
+	
+end;
+inradius:
+	 
+end;
+always:
+	 
+end;
+

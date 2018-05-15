@@ -1,0 +1,24 @@
+global:
+   integer i=3;
+   integer k=0;
+end;
+start:
+    loadObject(retryIcon,350,250);
+end;
+keydown:
+end;
+impassable:
+   
+end;
+collision:
+    mouseClick with retryIcon:
+        switchState(stage1);
+    end;   
+end;
+always:
+   
+end;
+inradius:
+  
+end;
+

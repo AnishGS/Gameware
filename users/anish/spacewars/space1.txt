@@ -1,0 +1,85 @@
+
+global:
+
+integer k=0;
+integer ab=0;
+end;
+start:
+    loadAudio(song); 
+    loadAudio(laserSound);
+    song.playOnce();
+    setBgColor(000000);
+    integer i=2;
+    while(i < 50):
+        k=0-i;
+         integer j=0;
+         while(j < 4):
+             loadObject(sky[ab],j*300,k*500);
+              ab=ab+1;
+              j=j+1;
+         end;
+        integer x=random(0,2000);
+        loadObject(enemy[i],x,k*500);
+        i=i+1;
+    end;
+    i=2;
+     while(i < 50):
+        k=0-i;
+        integer r=random(0,2000);
+        loadObject(enemy2[i],r,k*300);
+        i=i+1;
+    end;
+    loadObject(spaceship,1500,400);
+    loadObject(laser,0,0);
+    spaceship.setRadius(1000,1000);
+end;
+collision:
+    laser with enemy:
+        enemy.destroy();
+    end;
+    laser with enemy2:
+        enemy2.destroy();
+    end;
+    spaceship with enemy:
+        song.stop();
+        switchState(gameover2);
+    end;
+    spaceship with enemy2:
+        song.stop();
+        switchState(gameover2);
+    end;
+end;
+keydown:
+    KEY_SPACEBAR:
+        laserSound.playOnce();
+        laser.shootY(-100);
+    end;
+    KEY_RIGHT:
+        spaceship.moveX(30);
+    end;
+    KEY_LEFT:
+        spaceship.moveX(-30);
+    end;
+    KEY_UP:
+        spaceship.moveY(-40);
+    end;
+    KEY_DOWN:
+        spaceship.moveY(20);
+    end;
+end;
+inradius:
+    enemy with spaceship:
+        enemy.follow(spaceship,15);
+    end;
+     enemy2 with spaceship:
+        enemy2.follow(spaceship,15);
+    end;
+end;
+impassable:
+end;
+always:
+    spaceship.stick(laser);
+    spaceship.moveY(-15);
+    spaceship.stick(camera);
+end;
+

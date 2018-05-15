@@ -1,0 +1,35 @@
+start:                          /*executes wwhen game starts initially*/
+    loadObject(man,20,20);
+    loadObject(land,0,400);
+end;
+
+keydown:                         /*keyboard events*/
+    KEY_RIGHT:
+       man.moveX(200); 
+    end;
+end;
+
+impassable:
+    man with land;
+end;
+
+
+
+
+
+
+always:                      /*custom code*/
+    
+end;
+
+
+global:
+
+end;
+collision:
+
+end;
+inradius:
+
+end;
+
