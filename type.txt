@@ -1,0 +1,6 @@
+Domain Specific
+Statically typed-all checking done at compile time
+	manifestly typed-types must be user declared
+	strong type- a data cannot be changed(no typecasting)
+
+Dynamic typing -errors
