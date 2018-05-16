@@ -23,6 +23,6 @@ To contribute, you must know the following
 - [kiwi.js](https://github.com/gamelab/kiwi.js/)
 
 ### System Screenshots
-[Editor](https://github.com/AnishGS/Gameware/blob/master/screenshots/screen1.png)
+![Editor](https://github.com/AnishGS/Gameware/blob/master/screenshots/screen1.png)
 
-[Game](https://github.com/AnishGS/Gameware/blob/master/screenshots/screen2.png)
+![Game](https://github.com/AnishGS/Gameware/blob/master/screenshots/screen2.png)
