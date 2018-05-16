@@ -2,7 +2,7 @@
 _A prototype for a programming language to build video games._
 
 ### What is Gameware?
-Gameware is an online game development environment. It contains a built in programming language with dedicated syntax for writing video game code smoothly.
+Gameware is a game development environment. It contains a built in programming language with dedicated syntax for writing video game code smoothly.
 
 ### How does Gameware work?
 **PlayScript** is the scripting language behind Gameware. The user writes the game code in **PlayScript**. **PlayScript** code is then transcompiled into its equivalent HTML+javaScript form to create a HTML5 compatible game which can run in a client browser.
